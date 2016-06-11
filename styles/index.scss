@@ -1,17 +1,26 @@
 @import "reset";
 
-// Text colors
-$headingColor: #2E2E2E;
+// Greyscale colors
 $vanta:#333333;
-$darkColor: #494949;
-$linkColor: #0E58F5;
-$mediumGrey: #d6d6d6;
+$darkGrey: #494949;
+$mediumDarkGrey:#666;
+$mediumGrey: #B0B0B0;
+$lightGrey:#F0F0F0;
 $white: #FFFFFF;
 
-//typography
-$font-stack:normal 14px/1.5 "Helvetica Neue", sans-serif;
+$linkColor: #0E58F5;
 
-//radius lol
+//Hues
+$electricBlue:#167FFC;
+$muteBlue:#36c;
+$modestPink:#FD3259;
+$bubbleGum:#FF5C6F;
+$summerGreen:#1caf44;
+
+//typography
+$font-stack:normal 14px/1.5 "Roboto","Helvetica Neue", sans-serif;
+
+//radius
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -23,14 +32,15 @@ $font-stack:normal 14px/1.5 "Helvetica Neue", sans-serif;
 body{
   font:$font-stack;
   color:$vanta;
+  background-color:$lightGrey;
 }
 
 .button{
   font:$font-stack;
-  font-weight:500;
+  font-weight:300;
   @include border-radius(3px);
   /*border:1px solid $mediumGrey;*/
-  border:none;
+  border:1px solid transparent;
   padding: 6px 18px;
   background-color: $linkColor;
   color:$white;
@@ -38,7 +48,7 @@ body{
   margin-right:15px;//for testing purposes only
 
   &:hover{
-  background-color:lighten($linkColor, 5%);
+  background-color:$electricBlue;
   box-shadow:0px 1px 2px 0px rgba( $mediumGrey, .9 );
   }
 }
